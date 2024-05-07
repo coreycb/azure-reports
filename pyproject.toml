@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "azure-tools"
+version = "2024.0.0"
+dependencies = [
+  "azure-mgmt-resource",
+  "azure-identity",
+]
+requires-python = ">=3.10"
+description = "Azure tools that use the Python SDK"
+readme = "README.md"
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.scripts]
+az-list-resources = "azure_tools.list_resources:main"
+az-list-groups = "azure_tools.list_groups:main"
